@@ -1,0 +1,38 @@
+<form method="post" action="modifyMemo.php?id=<{$sstatus_id}>">
+<table border="1" width="100%" cellpadding="2" cellspacing="1">
+<tr>
+    <th colspan="2">
+        <{$sstatus_modifyMemoTitle}>
+    </th>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_memoStatus}>
+    </td>
+    <td class="even">
+        <select name="newStatus">
+            <{html_options values=$sstatus_select_id selected=$sstatus_oldStatus output=$sstatus_options}>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_memoText}>
+    </td>
+    <td class="even">
+        <textarea name="newMemo" rows="4" cols="60" class="formButton"><{$sstatus_oldMemo}></textarea>
+    </td>
+</tr>
+<tr>
+    <td class="head">
+    </td>
+    <td class="even" nowrap>
+        <input type="submit" value="<{$sstatus_submit}>" name="modifiedMemo">
+        <input type="reset" value="<{$sstatus_reset}>">
+        <{if $sstatus_showDelete eq True}>
+            <input type="submit" value="<{$sstatus_deleteMemo}>" name="deleteMemo">
+        <{/if}>
+    </td>
+</tr>
+</table>
+</form>

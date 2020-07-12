@@ -1,0 +1,53 @@
+Service Status Module for Xoops 2(/sstatus)
+Purpose: To display a quick overview of IT services with their current status.  Status can be
+one of 3 values: Good (Online), Okay (Problems), Bad (Down) (traffic light?)
+A administrative user should be to find the service in question, and quickly post an update of
+the service status, as well as a brief (2000chrs) description of problem / estimate
+
+The list of services should be configurable by an administrative user, and be able to control 
+who can post updates for which service (ACL)
+
+Breakdown of pages:
+1. Overview Page
+	Display a paged list of services, ordered by last updated date. This list should contain
+	the service name, a graphical representation of the service status, and the last updated 
+	timestamp. A user, Jane, will be able to click on one of the services to jump to 
+	<Service Info Page>.
+
+2. Add Service (Admin Only)
+	Display a form prompting the admin, Brian, for the service name, a brief description of the
+	service, starting status, and an optional status message.
+
+3. Modify Service (Edit / Delete) (Admin Only)
+	Display a form prompting the admin, Brian, to modify the service name, and description, below this
+	form, display a list of the status messages that have been added for this service, ordered by 
+	posted date. Clicking on an individual message will display the <Modify Status Message> page.
+	
+4. Service Info Page
+	When Jane clicks on a service from the <Overview Page> she sees the Service Name, the description,
+	the current status, who last updated the service, and when. Below this, the last n service messages
+	for that service will be displayed. When Alan views the same page, he will see a list of editor
+	tasks for this service:
+	"Update Status" - links to <Submit Service Status> page
+	
+	When Brian views this page in addition to the editorial tasks he will also see:
+	"Add a new Service" - links to <Add Service>
+	"Modify Service" - links to <Modify Service> page
+	
+5. Submit Service Status (Form + Processor)
+	Display a form that allows Alan to update the status of the service.  He can pick one of the 3
+	statuses (Good, Okay, Bad), and can optionally include a description of the status.
+
+6. Modify Status Message (Edit / Delete) (Admin Only)
+	Display a form that allows Brian, the "admin", to modify or delete an individual status message. 
+	Once a message has been modified, the words "Modified by <user> on <date>" are added to the 
+	bottom of the message.
+
+Still Needed:
+A graphical manner to represent the various server statuses (should an admin be able to modify 
+the status images / add more?)
+
+We should use the Xoops Permissions system to control who can update a service, but should this
+be done by user, or by group?
+
+$Id: Module\040Overview.txt,v 1.1 2004/06/01 15:44:46 ackbarr Exp $

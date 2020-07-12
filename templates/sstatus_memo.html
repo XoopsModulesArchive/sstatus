@@ -1,0 +1,36 @@
+<form method="post" action="addMemo.php?id=<{$sstatus_serviceid}>">
+<table border="1" width="100%" cellpadding="2" cellspacing="1">
+<tr>
+    <th colspan="2">
+        <{$sstatus_addMemo}>
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap align="right">
+        <{$sstatus_status}>
+    </td>
+    <td class="even">
+        <select name="newStatus">
+            <option value="1"><{$sstatus_option1}>
+            <option value="2"><{$sstatus_option2}>
+            <option value="3"><{$sstatus_option3}>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap align="right">
+        <{$sstatus_memoText}>
+    </td>
+    <td class="even">
+        <textarea name="newMemo" rows="4" cols="60" class="formButton"></textarea>
+    </td>
+</tr>
+<tr>
+    <td class="head"></td>
+    <td class="even" nowrap>
+        <input type="submit" value="<{$sstatus_submit}>" name="newMemoSubmitted">
+        <input type="reset" value="<{$sstatus_reset}>">
+    </td>
+</tr>
+</table>
+</form>

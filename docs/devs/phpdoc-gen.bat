@@ -1,0 +1,1 @@
+c:\php\pear\phpdoc -d F:\Code\Xoops\XOOPS_CVS\modules\sstatus\class\ -f f:\code\xoops\releases\xoops-2.0.7\html\kernel\object.php,f:\code\xoops\releases\xoops-2.0.7\html\class\criteria.php -o HTML:frames:earthli -t F:\Code\Xoops\XOOPS_CVS\modules\sstatus\docs\devs -ti "Service Status Module"

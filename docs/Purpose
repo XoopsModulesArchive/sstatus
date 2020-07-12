@@ -1,0 +1,46 @@
+Service Status
+Purpose - Display a quick overview of all a companies services (DB, Website, Internet Access, etc)
+with an iconic view of their current status (ie - a traffic light, green means no problems, 
+yellow means minor issues, red means down/unavailable).
+
+
+Important Notes
+1. Only Authorized Users can add new status "memos"
+2. The authoring users may be different from service to service. (will they really differ?)
+3. Services should be added / removed at will
+4. Need a weighting system to order services
+5. Possiblities to tie to helpdesk applications
+6. Should be simple for author to add new memos
+7. Long term - add SOAP service for www.epconline.com, www.epcusa.com
+8. Service Categories?
+9. Should some services / memos be private (reserved for admins / authors)
+
+Needed Pieces
+1. Blocks
+	a. Quick Overview - display service name and small icon for status
+	b. Admin functions - makes posting new memos, managing security, and changing status simple
+		(no need to head to admin panel for updating, no need for module admin access for these 
+		features)
+	c. any more?
+2. Pages
+	a. Service List Page - Similar to the "Quick Overview" block, displays each service, 
+		maybe the last service note, and the current status icon
+	b. Add Service Page - Used by module admins to create new services, add authors
+	c. Edit Service Page - Used by module / service admins to modify a service
+	d. Solo Service Page - Displays an individual service, a large icon representing the status,
+		and a paged list of current / past memos
+	e. Post Memo Page - Displays a form to fill out the memo text, and pick the current service status
+3. Admin Needs:
+	a. Add / Edit Remove Services
+	b. Manage Service Post Rights (is this really necessary)
+	
+Notification Events
+1. Notify me when a new service is added (admin only)
+2. Notify me when a service is modified (admin only)
+3. Notify me when a service is removed (admin only)
+4. Notify me when a new memo is posted (to any service)
+5. Notify me when a service status changes (for any service)
+6. Notify me when a memo is added to this service (individual service)
+7. Notify me when the service status changes (individual service)
+
+$Id: Purpose,v 1.1 2004/06/01 15:44:46 ackbarr Exp $

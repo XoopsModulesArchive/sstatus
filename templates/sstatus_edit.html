@@ -1,0 +1,82 @@
+<form method="post" action="modifyService.php?id=<{$sstatus_serviceid}>">
+<table border="1" width="100%" cellpadding="2" cellspacing="1">
+<tr>
+    <th colspan="2">
+        <{$sstatus_modifyServiceTitle}>
+    </th>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_serviceName}>
+    </td>
+    <td class="even" nowrap>
+        <input type="text" name="newServiceName" value="<{$sstatus_oldName}>" class="formButton">
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_serviceDesc}>
+    </td>
+    <td class="even">
+        <textarea name="newServiceDescription" rows="4" cols="60" class="formButton"><{$sstatus_oldDesc}></textarea>
+    </td>
+</tr>
+<tr>
+    <td class="head"></td>
+    <td class="even" nowrap>
+        <input type="submit" value="<{$sstatus_submit}>" name="modified">
+        <input type="reset" value="<{$sstatus_reset}>">
+        <{if $sstatus_showDelete eq True}>
+            <input type="submit" value="<{$sstatus_deleteService}>" name="deleteService">
+        <{/if}>
+    </td>
+</tr>
+</table>
+</form>
+
+<!--Edit a memo-->
+<table border="1" width="100%" cellpadding="2" cellspacing="1">
+<tr>
+    <th colspan="4">
+        <{$sstatus_previousInfo}>
+    </th>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_status}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_memoText}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_posted}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_updatedBy}>
+    </td>
+</tr>
+<{foreach from=$sstatus_memoList item=memo}>
+    <tr>
+        <td class="even" nowrap>
+            <img src="images/status_icon<{$memo.status}>.GIF" border="0">
+        </td>
+        <td class="even" nowrap>
+            <{if $sstatus_showUrl eq True}>
+                <a href="<{$memo.memoInfo}>"><{$memo.memo}></a>
+            <{else}>
+                <{$memo.memo}>
+            <{/if}>
+        </td>
+        <td class="even" nowrap>
+            <{$memo.posted}>
+        </td>
+        <td class="even" nowrap>
+            <a href="<{$memo.userinfo}>"><{$memo.uname}></a>
+        </td>
+    </tr>
+<{/foreach}>
+</table>
+
+<div id="pageNav">
+    <{$sstatus_pageNav}>
+</div>

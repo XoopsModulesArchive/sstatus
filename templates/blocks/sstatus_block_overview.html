@@ -1,0 +1,11 @@
+<div id="sstatus_overview">
+<ul>
+<{foreach item=service from=$block.services}>
+    <li>
+        <a href="<{$service.url}>" title="<{$service.name}>"><{$service.truncName}></a>&nbsp;
+        <img src="<{$block.imagePath}><{$service.status}>.GIF" border="0" title="<{$service.status_title}>">
+    </li>        
+<{/foreach}>
+</ul>
+<{$block.pageNav}>
+</div>

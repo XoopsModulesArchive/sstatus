@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class sstatusService</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> sstatusService</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sstatusService class</p>
+<p class="description"><p>Information about an individual service</p><p><pre><ol><code><pre><li> <span class="src-var">$hService </span>=<span class="src-sym">&amp; </span><span class="src-id">xoops_getmodulehandler</span><span class="src-sym">(</span><span class="src-str">'Service'</span><span class="src-sym">, </span><span class="src-str">'sstatus'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> <span class="src-var">$service </span>=<span class="src-sym">&amp; </span><span class="src-var">$hService</span><span class="src-sym">-&gt;</span><span class="src-id">get</span><span class="src-sym">(</span><span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> <span class="src-var">$service_id </span>= <span class="src-var">$service</span><span class="src-sym">-&gt;</span><a href="../kernel/XoopsObject.html#methodgetVar">getVar</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> <span class="src-var">$memos </span>=<span class="src-sym">&amp; </span><span class="src-var">$service</span><span class="src-sym">-&gt;</span><a href="../sstatus/sstatusService.html#methodgetMemos">getMemos</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> echo <span class="src-var">$service</span><span class="src-sym">-&gt;</span><a href="../sstatus/sstatusService.html#methodcurrentStatus">currentStatus</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> echo <span class="src-var">$service</span><span class="src-sym">-&gt;</span><a href="../sstatus/sstatusService.html#methodlastUpdated">lastUpdated</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+</pre></code></ol></pre></p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> copyright &amp;copy; 2000 XOOPS.org</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">author:</span> Brian Wahoff &lt;<a href="mailto:bwahoff@epcusa.com">bwahoff@epcusa.com</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_XOOPS_CVS_modules_sstatus_class_service_php.html">/XOOPS_CVS/modules/sstatus/class/service.php</a> (line <span class="field">28</span>)
+		</p>
+		
+				
+		<pre><a href="../kernel/XoopsObject.html">XoopsObject</a>
+   |
+   --sstatusService</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">sstatusService</span>
+										<a href="#sstatusService" title="details" class="method-name">sstatusService</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#createMemo" title="details" class="method-name">&amp;createMemo</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$status</span> = <span class="var-default">1</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#currentStatus" title="details" class="method-name">currentStatus</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getLastMemo" title="details" class="method-name">&amp;getLastMemo</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getMemoCount" title="details" class="method-name">getMemoCount</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getMemos" title="details" class="method-name">getMemos</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$limit</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$start</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#insertMemo" title="details" class="method-name">insertMemo</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$memo</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#lastUpdated" title="details" class="method-name">lastUpdated</a>
+										()
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../kernel/XoopsObject.html">XoopsObject</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../kernel/XoopsObject.html#var$cleanVars">XoopsObject::$cleanVars</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../kernel/XoopsObject.html#var$vars">XoopsObject::$vars</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodsstatusService" id="sstatusService"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor sstatusService</span> (line <span class="line-number">29</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">sstatusService</span>
+		<span class="method-name">
+			sstatusService
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodcreateMemo" id="createMemo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">createMemo</span> (line <span class="line-number">114</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">create a memo for the service</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> new <a href="../sstatus/sstatusMemo.html">sstatusMemo</a> object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			&amp;createMemo
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$status</span> = <span class="var-default">1</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodcurrentStatus" id="currentStatus"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">currentStatus</span> (line <span class="line-number">92</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">determine the currentStatus of the service</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Current Status</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			currentStatus
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetLastMemo" id="getLastMemo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getLastMemo</span> (line <span class="line-number">149</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets the last memo posted to DB</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> <a href="../sstatus/sstatusMemo.html">sstatusMemo</a> object, false if no memos in db</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			&amp;getLastMemo
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetMemoCount" id="getMemoCount"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getMemoCount</span> (line <span class="line-number">78</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Counts the number of memos</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> number of memos for a service</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getMemoCount
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetMemos" id="getMemos"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getMemos</span> (line <span class="line-number">53</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">retrieve all memos attached to this service object</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of <a href="../sstatus/sstatusMemo.html">sstatusMemo</a> objects</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getMemos
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$limit</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$start</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodinsertMemo" id="insertMemo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">insertMemo</span> (line <span class="line-number">133</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">insert new memo into database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if insert was successful, false if not</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			insertMemo
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$memo</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodlastUpdated" id="lastUpdated"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">lastUpdated</span> (line <span class="line-number">103</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">determine last time the service was updated relative to the current user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Timestamp of last update</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			lastUpdated
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../kernel/XoopsObject.html">XoopsObject</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodXoopsObject">XoopsObject::XoopsObject()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodassignVar">XoopsObject::assignVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodcleanVars">XoopsObject::cleanVars()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodclone">XoopsObject::clone()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodgetErrors">XoopsObject::getErrors()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodgetHtmlErrors">XoopsObject::getHtmlErrors()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodgetVar">XoopsObject::getVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodgetVars">XoopsObject::getVars()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodinitVar">XoopsObject::initVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodisDirty">XoopsObject::isDirty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodisNew">XoopsObject::isNew()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodregisterFilter">XoopsObject::registerFilter()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodsetDirty">XoopsObject::setDirty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodsetErrors">XoopsObject::setErrors()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodsetNew">XoopsObject::setNew()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodsetVar">XoopsObject::setVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodunsetDirty">XoopsObject::unsetDirty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../kernel/XoopsObject.html#methodunsetNew">XoopsObject::unsetNew()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 31 Aug 2004 09:08:18 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

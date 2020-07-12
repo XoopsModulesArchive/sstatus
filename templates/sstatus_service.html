@@ -1,0 +1,88 @@
+<form>
+<table border="1" width="100%" class="outer">
+<tr>
+    <th colspan="5">
+        <{$sstatus_serviceInfoTitle}>
+    </th>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_name}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_desc}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_currStatus}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_lastUpdatedText}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_updatedBy}>
+    </td>
+</tr>
+<tr>
+    <td class="even" nowrap>
+        <{$sstatus_serviceName}>
+    </td>
+    <td class="even">
+        <{$sstatus_serviceDesc}>
+    </td>
+    <td class="even" nowrap>
+        <img src="images/status_icon<{$sstatus_serviceStatus}>.GIF" border="0">
+    </td>
+    <td class="even">
+        <{$sstatus_lastUpdated}>
+    </td>
+    <td class="even" nowrap>
+        <a href="<{$sstatus_userInfo}>"><{$sstatus_lastUser}></a>
+    </td>
+</tr>
+</table>
+
+<br>
+
+<table border="1" width="100%" class="outer">
+<tr>
+    <th colspan="4">
+        <{$sstatus_previousInfo}>
+    </th>
+</tr>
+<tr>
+    <td class="head" nowrap>
+        <{$sstatus_status}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_memoText}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_posted}>
+    </td>
+    <td class="head" nowrap>
+        <{$sstatus_updatedBy}>
+    </td>
+</tr>
+<{foreach from=$sstatus_memoList item=memo}>
+    <tr>
+        <td class="even" nowrap>
+            <img src="images/status_icon<{$memo.status}>.GIF" border="0">
+        </td>
+        <td class="even" nowrap>
+            <{$memo.memo}>
+        </td>
+        <td class="even" nowrap>
+            <{$memo.posted}>
+        </td>
+        <td class="even" nowrap>
+            <a href="<{$memo.userinfo}>"><{$memo.uname}></a>
+        </td>
+    </tr>
+<{/foreach}>
+</table>
+</form>
+
+<div id="pageNav">
+    <{$sstatus_pageNav}>
+</div>
+<{include file='db:system_notification_select.html'}>

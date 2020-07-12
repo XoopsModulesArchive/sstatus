@@ -1,0 +1,56 @@
+<form method="post" action="addService.php">
+<table border="1" width="100%" cellpadding="2" cellspacing="1">
+<tr>
+    <th colspan="2">
+        <{$sstatus_addServiceTitle}>
+    </th>
+</tr>
+<tr>
+    <td class="head" nowrap align="right" width="10%">
+        <{$sstatus_serviceName}>
+    </td>
+    <td class="even">
+        <input type="text" name="serviceName" class="formButton">
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap align="right">
+        <{$sstatus_serviceDesc}>
+    </td>
+    <td class="even">
+        <textarea name="description" rows="4" cols="60" class="formButton"></textarea>
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap align="right">
+        <{$sstatus_serviceStatus}>
+    </td>
+    <td class="even">
+        <select name="startStatus">
+            <option value="1"><{$sstatus_option1}>
+            <option value="2"><{$sstatus_option2}>
+            <option value="3"><{$sstatus_option3}>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="head" nowrap align="right">
+        <{$sstatus_serviceMemo}>
+    </td>
+    <td class="even">
+        <textarea name="memo" rows="4" cols="60" class="formButton"></textarea>
+        <{$sstatus_optional}>
+    </td>
+</tr>
+<tr>
+    <td class="head">
+        
+    </td>
+    <td class="even">
+        <input type="submit" value="<{$sstatus_submit}>" name="submitted" class="formButton">
+        <input type="reset" value="<{$sstatus_reset}>" class="formButton">
+    </td>
+</tr>
+</table>
+</form>
+
